@@ -15,13 +15,7 @@
 - [Stats](#wrench-stats)
 - [Contribute](#raised_hands-contribute)
 - [Acknowledgements](#gem-acknowledgements)
-- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
-- [Follow Me](#rocket-follow-me)
-- [Learn More](#books-learn-more)
 - [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
-- [Give A Star](#star-give-a-star)
-- [Star History](#star2-star-history)
-- [Give A Star](#star-give-a-star)
 
 </details>
 
@@ -73,7 +67,6 @@ modern-portfolio/
 
 ![Showcase Projects](/.github/images/img3.png "Showcase Projects")
 
-![Contact Form](/.github/images/img4.png "Contact Form")
 
 ## :gear: Tech Stack
 
