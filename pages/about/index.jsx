@@ -2,91 +2,88 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CountUp from "react-countup";
 import {
-  FaCss3,
-  FaFigma,
   FaHtml5,
-  FaJs,
-  FaReact,
-  FaWordpress,
+  FaCss3,
+  FaPython,
+  FaDatabase,
+  FaCode,
 } from "react-icons/fa";
 import {
-  SiAdobephotoshop,
-  SiAdobexd,
-  SiFramer,
-  SiNextdotjs,
+  SiDjango,
+  SiFastapi,
+  SiMongodb,
+  SiMysql,
+  SiOpenai,
+  SiAmazonaws,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 
-//  data
+// Calculate years of experience from 2021
+const yearsOfExperience = new Date().getFullYear() - 2021;
+
+// Realistic portfolio-based data
 export const aboutData = [
   {
     title: "skills",
     info: [
       {
-        title: "Web Development",
-        icons: [
-          FaHtml5,
-          FaCss3,
-          FaJs,
-          FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
-        ],
+        title: "Web & Backend Development",
+        icons: [FaHtml5, FaCss3, FaPython, SiDjango, SiFastapi, SiMysql, SiMongodb],
       },
       {
-        title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        title: "AI & LLM Tools",
+        icons: [SiOpenai, FaCode, SiAmazonaws],
       },
     ],
   },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
+{
+  title: "certifications",
+  info: [
+    {
+      title: "Python for Everybody - Coursera",
+      stage: "2023",
+    },
+    {
+      title: "LangChain & Vector DBs - DeepLearning.AI",
+      stage: "2024",
+    },
+    {
+      title: "LLMs for AI Applications - DeepLearning.AI",
+      stage: "2024",
+    },
+    {
+      title: "Vector Databases for Chatbots - DeepLearning.AI",
+      stage: "2024",
+    },
+  ],
+},
+
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Software Engineer - Kodexo Labs",
+        stage: "Sep 2023 – Present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Junior Software Engineer - Love For Data",
+        stage: "Jun 2022 – Nov 2023",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Data Digitization Officer - Love For Data",
+        stage: "Mar 2021 – Jun 2022",
       },
     ],
   },
   {
-    title: "credentials",
+    title: "education",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Bachelors in Commerce - University of Sindh",
+        stage: "2025",
       },
     ],
   },
@@ -99,7 +96,7 @@ const About = () => {
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
-      {/* avatar img */}
+      {/* Avatar image */}
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
@@ -111,7 +108,7 @@ const About = () => {
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* text */}
+        {/* Left: Text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -120,21 +117,19 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Software Engineer & <span className="text-accent">AI Specialist</span>
           </motion.h2>
+
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            I specialize in building scalable AI-integrated software using Python, FastAPI, and Langchain. With a background in backend engineering and passion for LLMs and automation, I help teams build powerful tools that deliver real value.
           </motion.p>
 
-          {/* counters */}
+          {/* Counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
@@ -142,50 +137,41 @@ const About = () => {
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
-              {/* experience */}
+              {/* Experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={yearsOfExperience} duration={3} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience.
+                  Years of experience
                 </div>
               </div>
 
-              {/* clients */}
+              {/* Projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={40} duration={3} />
+                  <span>+</span>
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients.
+                  Finished projects
                 </div>
               </div>
 
-              {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects.
-                </div>
-              </div>
-
-              {/* awards */}
+              {/* Certifications */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
+                  <CountUp start={0} end={4} duration={3} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards.
+                  Certifications earned
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* info */}
+        {/* Right: Tabs */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -214,13 +200,11 @@ const About = () => {
                 key={itemI}
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
               >
-                {/* title */}
                 <div className="font-light mb-2 md:mb-0">{item.title}</div>
                 <div className="hidden md:flex">-</div>
                 <div>{item.stage}</div>
 
                 <div className="flex gap-x-4">
-                  {/* icons */}
                   {item.icons?.map((Icon, iconI) => (
                     <div key={iconI} className="text-2xl text-white">
                       <Icon />
